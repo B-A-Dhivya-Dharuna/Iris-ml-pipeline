@@ -24,15 +24,12 @@ This project simulates a typical MLOps pipeline:
 -> Git
 
 **🐳 Build the Docker Image**
-bash
 docker build -t iris_image .
 
 **▶️ Run the Container**
-bash
 docker run iris_image
 
 **Expected Output:**
-Code
 ✅ Training data saved to: data/iris_train.csv (Rows: 105)
 ✅ Test data saved to: data/iris_test.csv (Rows: 45)
 ✅ Trained model saved as: models/iris_knn_model.pkl
@@ -45,7 +42,6 @@ Code
 -> Uses docker/build-push-action to build and push the image
 
 **📦 Final Image Location**
-bash
 docker pull dhivyadharuna/iris-ml-pipeline:latest
 
 Or view it on Docker Hub
@@ -67,7 +63,6 @@ CMD ["python", "iris.py"]
 
 requirements.txt:-
 
-Code
 pandas
 scikit-learn
 joblib
