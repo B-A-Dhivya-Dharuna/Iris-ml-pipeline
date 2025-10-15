@@ -14,20 +14,7 @@ This project simulates a typical MLOps pipeline:
 
 **⚙️ CI/CD Automation** Uses GitHub Actions to automatically build and push the Docker image to Docker Hub on every push to the main branch.
 
-**📁 Repository Structure**
-Code
-├── .github/
-│   └── workflows/
-│       └── docker-publish.yml     # GitHub Actions workflow
-├── Dockerfile                     # Defines container environment
-├── iris.py                        # ML pipeline script
-├── requirements.txt               # Python dependencies
-├── data/
-│   ├── iris_train.csv             # Training data
-│   └── iris_test.csv              # Testing data
-├── models/
-│   └── iris_knn_model.pkl         # Saved model
-└── README.md                      # This file
+
 ## 🛠️ Local Setup & Execution
 **🔧 Prerequisites**
 -> Python 3.9+
@@ -51,16 +38,6 @@ Code
 ✅ Trained model saved as: models/iris_knn_model.pkl
 
 ## 🐙 Automated Deployment with GitHub Actions
-**🔐 Secrets Configuration**
-To enable Docker Hub authentication, configure these secrets in your GitHub repo:
-
-Secret Name	Description
---------------------------------------------------------------
-|DOCKER_USERNAME |	Your Docker Hub username                 |
-|DOCKER_PASSWORD |	Docker Hub Access Token (not password)   |
---------------------------------------------------------------
-
-**Location:** GitHub → Settings → Secrets and variables → Actions
 
 **⚙️ Workflow Details**
 -> Defined in .github/workflows/docker-publish.yml
